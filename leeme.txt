@@ -1,0 +1,35 @@
+Este es un blog que basado en la aplicacion de meteor creada por discover meteor. https://github.com/DiscoverMeteor/Microscope
+Primeros pasos:
+1. Instale meteor: curl https://install.meteor.com | sh
+2. Cree un directorio usando la herramienta 'meteor':
+meteor create microscope
+Este paso va a crear una aplicacion estandar. El paso siguiente seria borrar estos tres archivos, y empezar con nuestra aplicacion. 
+3. Agregar paquetes clave, por ahora bootstrap:
+meteor add twbs:bootstrap
+4. Crear 4 directorios: client, server, public, lib.
+5. Crear 2 archivos dentro de la carpeta client: main.html, main.js
+
+-- En meteor lo que esta en la carpeta server, solo corre por el server, lo que esta dentro de la carpeta client, solo corre por la carpeta client. El resto se puede acceder por ambos lados, client o server. 
+Fonts/Images van en la carpeta public, y lib se carga antes que el resto. El resto se carga alfabeticamente por nombre de archivo. --
+
+6. Creamos los archivos para css. En este caso, yo al principio, antes de preocuparme por la estetica, voy a copiar el css de discovermeteor. 
+
+
+El primer paso seria crear los distintos templates(modelos).
+
+El main.html va a tener una lista con posts, entonces al main le insertamos una etiqueta (inclusion tag) con postList, y postList lo creamos dentro de templates en un nuevo directorio post_list.html.
+
+Cualquier cosa que pongas por el lado client, meteor lo encontrara facilmente. La inclusion tag
+
+postList va a tener una insertion tag que se va a llamar postItem, y postItem con el boiler
+
+
+
+SPACEBARS es un metodo de meteor para los templates.
+Es simplemente HTML con inclusions, expressions y block helpers.
+
+inclussions: {{>templateName}} => reemplaza la inclusion con el nombre del template.
+expressions: {{title}}: invoca la propiedad de un objeto, o el valor de un template helper(mas adelante).
+
+block
+
