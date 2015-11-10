@@ -26,11 +26,23 @@ a {
 
 .navbar-default .navbar-toggle{
   border-color: #5C5F37;
+  background-color: black;
 }
 
+#login-dropdown-list a:hover {
+   color: #FFB251;
+}
+
+.navbar-toggle.collapsed:hover {
+  background-color: #5C5F37;
+}
 .navbar-default .navbar-brand {
   color: #5C5F37;
   font-variant: small-caps;
+}
+.navbar-default .navbar-brand:hover {
+  color: #FFB251;
+
 }
 
 #login-dropdown-list a {
@@ -66,16 +78,25 @@ a {
 
 #navigation {
   border-radius: 0;
+  background-color: black;
+  border: none;
 }
 label {
   color: #200E30;
 }
+.navbar-header {
+  background: black;
+}
 
 .navbar {
-  margin-bottom: 10px; }
+  margin-bottom: 3px;
+    border-color: #06000C;
+   }
   /* line 32, ../sass/style.scss */
   .navbar .navbar-inner {
-    border-radius: 0px 0px 3px 3px; }
+    border-radius: 0px 0px 0px 0px;
+
+     }
 
 #spinner {
   height: 300px; }
@@ -216,7 +237,7 @@ label {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;*/
-  height: 150px;
+  height: 165px;
   width: 100%;
   background-color: black;
   margin-top: -1%;
