@@ -29,6 +29,7 @@ a {
   background-color: black;
 }
 
+
 #login-dropdown-list a:hover {
    color: #FFB251;
 }
@@ -51,6 +52,10 @@ a {
 
 .navbar-default .navbar-nav > li > a {
     color: #5C5F37;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFB251;
 }
 
 .btn-default {
