@@ -8,7 +8,7 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
 body {
-  background: #eee;
+  background: #333C75;
   color: #666666; }
 
 #main {
@@ -18,6 +18,57 @@ body {
   position: absolute;
   top: 0px;
   width: 100%;
+}
+
+a {
+  color: #3D1BA5;
+}
+
+.navbar-default .navbar-toggle{
+  border-color: #5C5F37;
+}
+
+.navbar-default .navbar-brand {
+  color: #5C5F37;
+  font-variant: small-caps;
+}
+
+#login-dropdown-list a {
+  color: #5C5F37;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #5C5F37;
+}
+
+.btn-default {
+  color: #DCDDFF;
+  border-color: #999EA8;
+  background: #333C75;
+
+}
+
+.btn-default:hover {
+  background-color: black;
+  color: #FFB251;
+}
+
+.btn-primary{
+  color: #DCDDFF;
+  border-color: #999EA8;
+  background: #333C75;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  color: #FFB251;
+}
+
+#navigation {
+  border-radius: 0;
+}
+label {
+  color: #200E30;
 }
 
 .navbar {
@@ -69,7 +120,7 @@ body {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
-        color: #aaaaaa; }
+        color: #3D1BA5; }
     .post .post-content p {
       margin: 0; }
   .post .discuss {
@@ -157,4 +208,19 @@ body {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+.jumbotron {
+   background: url(/iliadImage2_opt.jpg) no-repeat center center; 
+ /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  height: 150px;
+  width: 100%;
+  background-color: black;
+  margin-top: -1%;
+  margin-bottom: -2%;
+  border-radius: 0;
+
 }

@@ -5,10 +5,11 @@
       <p>
         {{body}} <br>
         submitted by {{author}}
+         <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
         </p>
     </div>
-    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">your thoughts</a>
   </div>
 </template>
 
