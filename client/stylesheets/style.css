@@ -8,7 +8,7 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
 body {
-  background: #333C75;
+  background: #000;
   color: #666666; }
 
 #main {
@@ -21,12 +21,30 @@ body {
 }
 
 a {
-  color: #3D1BA5;
+  color: #D0790E;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: none;
+  color: #CF9042;
+}
+
+.post .post-content h3 a:hover {
+  text-decoration: none;
+  color: #CF9042;
 }
 
 .navbar-default .navbar-toggle{
   border-color: #5C5F37;
-  background-color: black;
+  background-color: #000000;
+}
+
+.navbar-default .navbar-toggle:hover {
+   background-color: #CC8E41;
+}
+
+.navbar-default .navbar-toggle:focus {
+  background-color: #000;
 }
 
 
@@ -35,7 +53,7 @@ a {
 }
 
 .navbar-toggle.collapsed:hover {
-  background-color: #5C5F37;
+  background-color: #CC8E41;
 }
 .navbar-default .navbar-brand {
   color: #5C5F37;
@@ -59,9 +77,9 @@ a {
 }
 
 .btn-default {
-  color: #DCDDFF;
+  color: #FFFFE5;
   border-color: #999EA8;
-  background: #333C75;
+  background: #B1A58D;
 
 }
 
@@ -111,7 +129,13 @@ label {
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
-  opacity: 1; }
+  opacity: 1; 
+  /*margin-top: 40px;*/
+  background-color: rgba(255, 249, 228, 0.96);
+  width: 50%;
+  margin: 40px 30% 0 25%;
+
+}
   .post:before, .post:after {
     content: "";
     display: table; }
@@ -141,14 +165,16 @@ label {
       font-size: 18px; }
       .post .post-content h3 a {
         display: inline-block;
-        margin-right: 5px; }
+        margin-right: 5px; 
+        color: #6F4D23;}
       .post .post-content h3 span {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
         color: #3D1BA5; }
     .post .post-content p {
-      margin: 0; }
+      margin: 0; 
+      color: #6B540E;}
   .post .discuss {
     display: block;
     float: right;

@@ -25,11 +25,51 @@ postList va a tener una insertion tag que se va a llamar postItem, y postItem co
 
 
 
-SPACEBARS es un metodo de meteor para los templates.
+#####SPACEBARS es un metodo de meteor para los templates.
 Es simplemente HTML con inclusions, expressions y block helpers.
 
 inclussions: {{>templateName}} => reemplaza la inclusion con el nombre del template.
 expressions: {{title}}: invoca la propiedad de un objeto, o el valor de un template helper(mas adelante).
 
-block
+block helpers controlar el flujo de un template {{#each}} {{/each}}  {{#if}} {{/if}}
+
+
+######templateHelpers
+helpers: preparan la data en la base de datos antes de entregar el plato terminado-los templates. No es un controller en el sentido en que conocemos los controllers. La convencion es que los helpers tienen el mismo nombre que el template pero  terminan con .js.
+
+Por ejemplo en un elemento se crea un elemento, un link('a'), al que se le agrega el hostname, y despues esto se agrega cuando esta listo al template.
+
+Una coleccion es una estructura de datos que almacena nuestra data por el lado del server de manera permanente y la sincroniza con el browser de un usuario.
+
+Cuando uno declara:
+Posts = new Mongo.Collection('posts'); 
+uno esta creando un cache local en el browser. Por cache se entiendo un sub-conjunto de nuestra data por el lado de nuestro client, que hace que tengamos accesso rapido a nuestra data.
+
+
+Remover el paquete autopublish que automaticamente publica todos los posts de la collection.
+
+
+Segundo paso:  agregar iron router.
+meteor add iron:router 
+Necesitamos crear una pagina individual, post_page, donde los usuarios pueden platicar sobre un post en particular.
+En la URL, deberia aparecer algo asi: http://myapp.com/posts/xyz que sea unica a cada post, donde la ultima parte se va cambiando gracias a un _id 
+identifier que sea unico a cada post. 
+
+www.site/paths
+
+segments: forward slashes
+hooks: tiene el usuario derecho a esta pagina?
+route templates: cada route necesita apuntar a un template. Si uno no especifica una, el router buscara automaticamente un template con el mismo nombre que la route.
+
+{{> yield}} : es un helper que automaticamente nos va a devolver el template que corresponda a ese route.
+
+
+Para crear posts estamos usando el metodo de Meteor: postInsert, pero para editarlos y borrarlos usamos update o remove directamente en el client y limitando el accesso mediante allow and deny. Uno opera desde el client level cuando la operacion es simple, pero cuando hay que hacer cosas mas alla del user control, se usa allow and deny. 
+
+
+Comentarios
+Hacemos una nueva coleccion para guardar nuestros comentarios, luego estos se publican, y luego se ponen en la view donde se hace un template y luego un helper para ese template. 
+
+
+Creamos una coleccion y luego la publicamos. 
 

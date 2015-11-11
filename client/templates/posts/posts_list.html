@@ -1,7 +1,17 @@
 <template name="postsList">
   <div class="posts">
     {{#each posts}}
-      {{> postItem}}
+      <div class="post">
+    <div class="post-content">
+      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+      <p><br>
+        submitted by {{author}}
+         <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+        </p>
+    </div>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">your thoughts</a>
+  </div>
     {{/each}}
   </div>
 </template>
