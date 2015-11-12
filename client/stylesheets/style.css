@@ -1,5 +1,5 @@
 .grid-block, .main, .post, .comments li, .comment-form {
-  background: #fff;
+  background: #000;
   border-radius: 3px;
   padding: 10px;
   margin-bottom: 10px;
@@ -24,9 +24,24 @@ a {
   color: #D0790E;
   font-weight: bold;
 }
+
+
 a:hover {
   text-decoration: none;
   color: #CF9042;
+}
+a .comments:hover {
+  text-decoration: none;
+  color: #CF9042;
+}
+
+.label-comment {
+  color: #E0D1AF;
+}
+
+.form-control {
+  width: 70%;
+
 }
 
 .post .post-content h3 a:hover {
@@ -63,7 +78,9 @@ a:hover {
   color: #FFB251;
 
 }
-
+.navbar-default .navbar-brand:focus{
+  color: #FFB251;
+}
 #login-dropdown-list a {
   color: #5C5F37;
 }
@@ -73,6 +90,10 @@ a:hover {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
+  color: #FFB251;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
   color: #FFB251;
 }
 
@@ -89,9 +110,9 @@ a:hover {
 }
 
 .btn-primary{
-  color: #DCDDFF;
+  color: #FFFFE5;
   border-color: #999EA8;
-  background: #333C75;
+  background: #B1A58D;
 }
 
 .btn-primary:hover {
@@ -132,9 +153,12 @@ label {
   opacity: 1; 
   /*margin-top: 40px;*/
   background-color: rgba(255, 249, 228, 0.96);
-  width: 50%;
-  margin: 40px 30% 0 25%;
+  width: 60%;
+  margin: 40px 25% 0 25%;
 
+}
+.post:hover{
+  background-color: #FFF2E5;
 }
   .post:before, .post:after {
     content: "";
@@ -182,7 +206,15 @@ label {
 
 .comments {
   list-style-type: none;
-  margin: 0; }
+  
+
+}
+.comments li {
+    background-color: rgba(255, 249, 228, 0.96);
+    color: #906C4B;
+    margin: 10px 25% 0 22.3%;
+    width: 62.2%; 
+}
   .comments li h4 {
     font-size: 16px;
     margin: 0; }

@@ -1,7 +1,8 @@
 <template name="postSubmit">
-{{> editableText collection="posts" field="body" wysiwyg=true}}
+ {{> editableText collection="posts" field="author"}}
 
-  <form class="main form page">
+
+  <!-- <form class="main form page">
     <div class="form-group {{errorClass 'title'}}">
       <label class="control-label" for="title">Title</label>
       <div class="controls">
@@ -11,9 +12,10 @@
     </div>
     <div class="form-group {{errorClass 'body'}}">
        <label class="control-label" for="title">Body</label>
+       <textarea type="text" value="" placeholder="what?" class="form-control" id="body" name="body"></textarea>
         <pre><textarea name="body" id="body" type="text" value="" placeholder="what?" class="form-control" rows="10"></textarea></pre>
     <span class="help-block">{{errorMessage 'body'}}</span>
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
-  </form>
+  </form> -->
 </template>
