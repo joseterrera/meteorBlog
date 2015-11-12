@@ -1,5 +1,7 @@
 <template name="postSubmit">
- {{> editableText collection="posts" field="author"}}
+ <!-- {{> editableText collection="posts" field="title"}} -->
+ {{> editableText context=postSubmit collection="posts" field="body" wysiwyg=true}}
+
 
 
   <!-- <form class="main form page">
