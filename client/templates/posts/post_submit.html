@@ -1,10 +1,14 @@
 <template name="postSubmit">
- <!-- {{> editableText collection="posts" field="title"}} -->
- {{> editableText context=postSubmit collection="posts" field="body" wysiwyg=true}}
+  <!--  <div class="form-group {{errorClass 'title'}}">
+      <label class="control-label" for="title">Title</label>
+      <div class="controls">
+          <input name="title" id="title" type="text" value="" placeholder="a title" class="form-control"/>
+      <span class="help-block">{{errorMessage 'title'}}</span>
+      </div>
+    </div> -->
 
-
-
-  <!-- <form class="main form page">
+{{> editableText context=postSubmit collection="posts" field="body" wysiwyg=true autoInsert=true}}
+ <!--  <form class="main form page">
     <div class="form-group {{errorClass 'title'}}">
       <label class="control-label" for="title">Title</label>
       <div class="controls">

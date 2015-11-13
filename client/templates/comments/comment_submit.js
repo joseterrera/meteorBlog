@@ -35,15 +35,5 @@ Template.commentSubmit.events({
       }
     });
   }
-  ,
-   'click .delete': function(e) {
-    e.preventDefault();
-
-    if (confirm("Delete this comment?")) {
-      var currentComment = this._id;
-      Comments.remove(currentComment);
-      Router.go('postItem');
-    }
-  }
 });
 

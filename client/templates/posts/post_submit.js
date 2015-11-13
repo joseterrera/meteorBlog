@@ -1,3 +1,15 @@
+// Template.postSubmit.helpers({
+//   postSubmit: function () {
+//     return Posts.insert(); // Put some real query in the findOne
+//   }
+// });
+
+Template.postSubmit.helpers({
+  postSubmit: function () {
+    return {body: ''};
+  }
+});
+
 Template.postSubmit.onCreated(function() {
   Session.set('postSubmitErrors', {});
 });
