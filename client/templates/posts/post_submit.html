@@ -1,4 +1,7 @@
 <template name="postSubmit">
+
+<iframe class= "textEditor" src="build/document.html"></iframe>
+<!-- <iframe src="build/document.html" onload="top.editor=this.contentWindow.editor" width="500" height="500"></iframe> -->
   <!--  <div class="form-group {{errorClass 'title'}}">
       <label class="control-label" for="title">Title</label>
       <div class="controls">
@@ -7,7 +10,7 @@
       </div>
     </div> -->
 
-{{> editableText context=postSubmit collection="posts" field="body" wysiwyg=true autoInsert=true}}
+<!-- {{> editableText context=postSubmit collection="posts" field="body" wysiwyg=true autoInsert=true}} -->
  <!--  <form class="main form page">
     <div class="form-group {{errorClass 'title'}}">
       <label class="control-label" for="title">Title</label>

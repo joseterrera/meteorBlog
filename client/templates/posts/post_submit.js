@@ -1,14 +1,24 @@
+Template.postSubmit.rendered = function() {
+    if(!this._rendered) {
+      this._rendered = true;
+      console.log('Template onLoad');
+      // iframe.contentWindow.editor;
+     $('.textEditor').contentWindow.editor;
+    }
+}
+
+
 // Template.postSubmit.helpers({
 //   postSubmit: function () {
-//     return Posts.insert(); // Put some real query in the findOne
+//     return Posts.findOne({title: "A new post", body: "body"}); 
 //   }
 // });
 
-Template.postSubmit.helpers({
-  postSubmit: function () {
-    return {body: ''};
-  }
-});
+// Template.postSubmit.helpers({
+//   postSubmit: function () {
+//     return {body: ''};
+//   }
+// });
 
 Template.postSubmit.onCreated(function() {
   Session.set('postSubmitErrors', {});
